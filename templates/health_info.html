@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Your Health Information</h1>
+    <form method="post">
+        <label for="height">Height (in cm):</label>
+        <input type="number" id="height" name="height" required>
+        
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        
+        <label for="conditions">Medical Conditions:</label>
+        <textarea id="conditions" name="conditions" rows="4"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if health_data %}
+        <div class="result">
+            <h2>Your Submitted Health Information:</h2>
+            <ul>
+                {% for key, value in health_data.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html>
