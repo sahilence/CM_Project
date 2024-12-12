@@ -9,24 +9,54 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #eafaf1; /* Light green background */
+            color: #2c6b3f; /* Dark green text */
+        }
+        h1 {
+            color: #2c6b3f; /* Dark green heading */
         }
         form {
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: left;
+            background: #ffffff; /* White form background */
+            padding: 20px;
+            border: 1px solid #a0d6b4; /* Light green border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        form input[type="file"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #a0d6b4; /* Light green border */
+            border-radius: 4px;
         }
         button {
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #74c69d; /* Green button background */
             color: white;
-            border: none;
+            font-weight: bold;
             cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #4c9e7a; /* Darker green on hover */
         }
         .result {
             margin-top: 20px;
             text-align: left;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 1px solid #a0d6b4; /* Light green border */
             padding: 15px;
-            background-color: #f9f9f9;
+            background-color: #f9f9f9; /* Light background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            white-space: pre-wrap;
+        }
+        .result h2 {
+            color: #2c6b3f; /* Dark green heading */
         }
     </style>
 </head>
@@ -40,11 +70,23 @@
     {% if result %}
         <div class="result">
             <h2>Extracted Nutritional Information:</h2>
-            <ul>
-                {% for key, value in result.items() %}
-                    <li><strong>{{ key }}:</strong> {{ value }}</li>
-                {% endfor %}
-            </ul>
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
+
+
+    
+    {% if food_quality %}
+        <div class="result">
+            <h2>Food Quality:</h2>
+            <p>{{ food_quality }}</p>
+        </div>
+    {% endif %}
+
+    {% if judgment %}
+        <div class="result">
+            <h2>Whether You Should Buy:</h2>
+            <p>{{ judgment }}</p>
         </div>
     {% endif %}
 </body>
