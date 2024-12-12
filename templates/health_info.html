@@ -9,31 +9,59 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #eafaf1; /* Light green background */
+            color: #2c6b3f; /* Dark green text */
+        }
+        h1 {
+            color: #2c6b3f; /* Dark green heading */
         }
         form {
             margin: 20px auto;
             max-width: 400px;
             text-align: left;
-            background: #f9f9f9;
+            background: #ffffff; /* White form background */
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #a0d6b4; /* Light green border */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
         form label {
             display: block;
             margin-bottom: 5px;
+            font-weight: bold;
         }
         form input, form textarea, form button {
             width: 100%;
             margin-bottom: 15px;
             padding: 10px;
+            border: 1px solid #a0d6b4; /* Light green border */
+            border-radius: 4px;
+        }
+        form input:focus, form textarea:focus, form button:focus {
+            outline: none;
+            border-color: #74c69d; /* Highlighted green */
+        }
+        form button {
+            background-color: #74c69d; /* Green button background */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #4c9e7a; /* Darker green on hover */
         }
         .result {
             margin-top: 20px;
             text-align: left;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 1px solid #a0d6b4; /* Light green border */
             padding: 15px;
-            background-color: #f9f9f9;
+            background-color: #f9f9f9; /* Light background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .result h2 {
+            color: #2c6b3f; /* Dark green heading */
         }
     </style>
 </head>
@@ -48,6 +76,9 @@
         
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" required>
+
+        <label for="sex">Sex:</label>
+        <input id="sex" name="sex" required>
         
         <label for="conditions">Medical Conditions:</label>
         <textarea id="conditions" name="conditions" rows="4"></textarea>
