@@ -18,10 +18,12 @@ Vitamin B12, A, and D deficiencies range from 14–31% in children and teens.
 Enhancing nutritional awareness and promoting healthier dietary
 habits among Indians through
 DishCovery.
+
 **Two main features:**
 
 Scan nutritional labels from packaged food to get a personalized
 evaluation of that product.
+
 Track the daily food you eat to get an analysis of your dietary
 patterns
 
