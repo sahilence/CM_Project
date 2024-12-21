@@ -1,4 +1,4 @@
-![WhatsApp Image 2024-12-13 at 13 31 05_002b9a90](https://github.com/user-attachments/assets/26ae95e3-f890-4d1b-91c5-d7bc2c466726)# CM_Project
+# CM_Project
 Project for CSE585 offering in Monsoon 2024
 
 ****Motivation and Problem statement****
